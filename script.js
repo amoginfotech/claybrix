@@ -1,20 +1,48 @@
 // Claybrix Website JavaScript
-// Handles sticky nav, hamburger menu, smooth scroll, and form
-
+// Handles sticky nav, hamburger menu, smooth scroll, form, and animations
 document.addEventListener('DOMContentLoaded', function () {
+    // Contact form (Formspree AJAX)
+    var form = document.querySelector('.contact-form');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var data = new FormData(form);
+            var xhr = new XMLHttpRequest();
+            xhr.open(form.method, form.action);
+            xhr.setRequestHeader('Accept', 'application/json');
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState !== XMLHttpRequest.DONE) return;
+                if (xhr.status === 200) {
+                    form.querySelectorAll('input, textarea, button').forEach(function(el) {
+                        el.style.display = 'none';
+                    });
+                    var msg = form.querySelector('.form-success');
+                    if (msg) msg.style.display = 'block';
+                } else {
+                    alert('Sorry, there was a problem sending your message. Please try again later.');
+                }
+            };
+            xhr.send(data);
+        });
+    }
+
     // Hamburger menu toggle
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
-    hamburger.addEventListener('click', function () {
-        navMenu.classList.toggle('active');
-        hamburger.classList.toggle('active');
-    });
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', function () {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    }
 
     // Close menu on link click (mobile)
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', function () {
-            navMenu.classList.remove('active');
-            hamburger.classList.remove('active');
+            if (navMenu && hamburger) {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
         });
     });
 
@@ -33,7 +61,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             }
         });
-    
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = {
+        threshold: 0.15
+    };
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -57,3 +90,4 @@ document.addEventListener('DOMContentLoaded', function () {
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
     });
+});
