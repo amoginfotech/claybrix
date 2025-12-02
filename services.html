@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClayBrix - Premium Real Estate Marketplace</title>
+    <title>Services - ClayBrix</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,89 +36,101 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="location.html">Location</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
                 <div class="ms-lg-3 mt-3 mt-lg-0">
-                    <a href="#download" class="btn btn-primary">Download App</a>
+                    <a href="index.html#download" class="btn btn-primary">Download App</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section d-flex align-items-center">
+    <!-- Page Header -->
+    <header class="bg-light py-5 mt-5">
+        <div class="container py-5 text-center">
+            <h1 class="display-4">Our Services</h1>
+            <p class="lead text-secondary">Everything you need to buy, sell, or rent properties.</p>
+        </div>
+    </header>
+
+    <!-- Services Grid -->
+    <section class="py-5">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1 class="hero-title">Find Your Perfect Space With <span
-                            class="text-primary-custom">ClayBrix</span></h1>
-                    <p class="hero-subtitle">The ultimate marketplace to buy, sell, and rent properties. From cozy homes
-                        to premium office spaces, we connect you with the best.</p>
-                    <div class="d-flex gap-3 flex-wrap" id="download">
-                        <a href="#" class="btn btn-dark btn-lg d-flex align-items-center gap-2">
-                            <i class="fa-brands fa-apple fa-xl"></i>
-                            <div class="text-start lh-1">
-                                <small style="font-size: 0.7rem">Download on the</small><br>
-                                <span>App Store</span>
-                            </div>
-                        </a>
-                        <a href="#" class="btn btn-dark btn-lg d-flex align-items-center gap-2">
-                            <i class="fa-brands fa-google-play fa-xl"></i>
-                            <div class="text-start lh-1">
-                                <small style="font-size: 0.7rem">GET IT ON</small><br>
-                                <span>Google Play</span>
-                            </div>
-                        </a>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="icon-box">
+                            <i class="fa-solid fa-house-user"></i>
+                        </div>
+                        <h3>Buy Properties</h3>
+                        <p class="text-secondary">Find your dream home from thousands of verified listings. Filter by
+                            location, price, and amenities.</p>
                     </div>
                 </div>
-                <div class="col-lg-6 mt-5 mt-lg-0 text-center">
-                    <!-- App Mockup Image -->
-                    <img src="screenshot.png" alt="ClayBrix App" class="img-fluid rounded-4 shadow-lg"
-                        style="max-height: 600px;">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="icon-box">
+                            <i class="fa-solid fa-sign-hanging"></i>
+                        </div>
+                        <h3>Sell Your Property</h3>
+                        <p class="text-secondary">List your property on our platform and reach millions of potential
+                            buyers instantly.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="icon-box">
+                            <i class="fa-solid fa-building-user"></i>
+                        </div>
+                        <h3>Rentals</h3>
+                        <p class="text-secondary">Looking for a place to stay? Browse our extensive collection of rental
+                            properties and apartments.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="icon-box">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <h3>Office Spaces</h3>
+                        <p class="text-secondary">Premium office spaces and coworking desks for startups, freelancers,
+                            and enterprises.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="icon-box">
+                            <i class="fa-solid fa-file-contract"></i>
+                        </div>
+                        <h3>Legal Assistance</h3>
+                        <p class="text-secondary">Get expert legal help with property documentation, registration, and
+                            verification.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="icon-box">
+                            <i class="fa-solid fa-calculator"></i>
+                        </div>
+                        <h3>Property Valuation</h3>
+                        <p class="text-secondary">Know the true worth of your property with our data-driven valuation
+                            tools.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Preview -->
-    <section class="py-5">
-        <div class="container py-5">
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="feature-card">
-                        <div class="icon-box">
-                            <i class="fa-solid fa-house-chimney"></i>
-                        </div>
-                        <h3>Buy & Sell</h3>
-                        <p class="text-secondary">Explore a wide range of residential and commercial properties or list
-                            your own with ease.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-card">
-                        <div class="icon-box">
-                            <i class="fa-solid fa-building"></i>
-                        </div>
-                        <h3>Office Spaces</h3>
-                        <p class="text-secondary">Find the perfect workspace for your business, from coworking desks to
-                            full floors.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-card">
-                        <div class="icon-box">
-                            <i class="fa-solid fa-key"></i>
-                        </div>
-                        <h3>Rentals</h3>
-                        <p class="text-secondary">Discover verified rental properties that match your lifestyle and
-                            budget.</p>
-                    </div>
-                </div>
-            </div>
+    <!-- CTA Section -->
+    <section class="py-5 bg-accent text-white">
+        <div class="container text-center">
+            <h2 class="mb-4 text-white">Ready to start your project?</h2>
+            <p class="mb-4 lead">Download the ClayBrix app today and get connected with the best professionals.</p>
+            <a href="index.html#download" class="btn btn-light btn-lg text-primary-custom fw-bold">Get Started Now</a>
         </div>
     </section>
 
